@@ -5,4 +5,4 @@ go:
   - 1.8
 
 script:
-  - go text -v ./
+  - go test -v ./
