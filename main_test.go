@@ -42,7 +42,9 @@ func BenchmarkMyStruct(b *testing.B) {
 		}
 	}
 
-	b.Cleanup(ms.Cleanup)
+	// NOTE: Travis CI ругается на этот м.
+	// b.Cleanup(ms.Cleanup)
+	ms.Cleanup()
 }
 
 // функции, которые начинаются с "Example" - это тесты,
@@ -124,8 +126,9 @@ func TestCase1(t *testing.T) {
 		})
 	})
 
+	// NOTE: Travis CI ругается на этот м.
 	// teardown func for test case here
-	t.Cleanup(func() {
-		fmt.Println("End of test case")
-	})
+	// t.Cleanup(func() {
+	// 	fmt.Println("End of test case")
+	// })
 }
