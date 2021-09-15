@@ -30,6 +30,8 @@ func TestDivisioner(t *testing.T) {
 
 }
 
+// для запуск бенчмарка нужно указать флаг -bench
+// $ go test -bench .
 func BenchmarkMyStruct(b *testing.B) {
 	ms := NewStruct(0, 0, 0)
 
